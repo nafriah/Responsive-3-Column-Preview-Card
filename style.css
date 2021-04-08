@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGrey: hsl(0, 0%, 95%);
+}
+
+body,
+button {
+  font-size: 15px;
+  background-color: var(--veryLightGrey);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+
+button {
+  padding: 5% 10% 5% 10%;
+  border-radius: 50px;
+  margin-top: 40%;
+  border: 2px solid;
+}
+
+h1 {
+  color: var(--veryLightGrey);
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 39px;
+}
+
+p {
+  color: var(--transparentWhite);
+  line-height: 25px;
+}
+
+.d-flex {
+  margin: 5% 10% 3% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex: 1;
+  flex: 1; /*all div same length irrespective of their content)*/
+  justify-self: center;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  flex: 33.33%;
+  padding: 5% 8% 5% 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col-1 {
+  background-color: var(--brightOrange);
+  border-radius: 15px 0 0 15px;
+}
+
+.col-1 button {
+  color: var(--brightOrange);
+  border-color: var(--brightOrange);
+}
+
+.col-2 {
+  background-color: var(--darkCyan);
+}
+
+.col-2 button {
+  color: var(--darkCyan);
+  border-color: var(--darkCyan);
+}
+
+.col-3 {
+  background-color: var(--veryDarkCyan);
+  border-radius: 0 15px 15px 0;
+}
+
+.col-3 button {
+  color: var(--veryDarkCyan);
+  border-color: var(--veryDarkCyan);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: var(--veryLightGrey);
+  color: var(--transparentWhite);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*Responsive*/
+@media screen and (min-width: 375px) {
+  .d-flex {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex: 1;
+    flex: 1; /*all div same length irrespective of their content)*/
+    margin: 8% 5% 8% 5%;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3 {
+    flex: 100%;
+    height: 95vh;
+  }
+
+  .col-1 {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .col-3 {
+    border-radius: 0 0 15px 15px;
+  }
+}
